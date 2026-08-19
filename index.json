@@ -1,0 +1,419 @@
+[
+  {
+    "id": "general-legal",
+    "name": "General Legal startup templates",
+    "version": "1.0.0",
+    "license": "CC0-1.0",
+    "jurisdictions": [
+      {
+        "country": "US"
+      }
+    ],
+    "languages": [
+      "en"
+    ],
+    "legalAreas": [
+      "commercial-contracts",
+      "confidentiality",
+      "data-protection",
+      "employment",
+      "healthcare-compliance",
+      "website-terms"
+    ],
+    "authors": [
+      {
+        "name": "General Legal",
+        "url": "https://general.legal",
+        "role": "drafter"
+      },
+      {
+        "name": "Stella",
+        "url": "https://github.com/stella/template-packs",
+        "role": "converter",
+        "date": "2026-08-19"
+      }
+    ],
+    "templateCount": 12,
+    "templates": [
+      {
+        "slug": "advisor-agreement",
+        "title": "Advisor Agreement",
+        "file": "templates/advisor-agreement/template.docx",
+        "license": "CC0-1.0",
+        "jurisdictions": [
+          {
+            "country": "US"
+          }
+        ],
+        "languages": [
+          "en"
+        ],
+        "legalArea": "commercial-contracts",
+        "fields": [
+          "companyName",
+          "effectiveDate",
+          "servicesDescription",
+          "servicesDates",
+          "fieldOfBusiness",
+          "optionShares",
+          "vestingYears",
+          "vestingInstallments",
+          "companyAddressLine1",
+          "companyAddressLine2"
+        ],
+        "sha256": "47aebed0d760364f3a6269547d8e4272a93140aab9ec11b1e5318cc2c4c0731c"
+      },
+      {
+        "slug": "business-associate-agreement",
+        "title": "Business Associate Agreement (BAA)",
+        "file": "templates/business-associate-agreement/template.docx",
+        "license": "CC0-1.0",
+        "jurisdictions": [
+          {
+            "country": "US"
+          }
+        ],
+        "languages": [
+          "en"
+        ],
+        "legalArea": "healthcare-compliance",
+        "fields": [
+          "companyName",
+          "companyState",
+          "servicesDescription",
+          "customerName",
+          "customerAddress",
+          "customerEmail",
+          "companyAddress",
+          "companyEmail"
+        ],
+        "sha256": "a394bc562ed3029120479d25514d491783a2dbafc4af1741843cc03073610f4a"
+      },
+      {
+        "slug": "cookie-notice",
+        "title": "Cookie Notice",
+        "file": "templates/cookie-notice/template.docx",
+        "license": "CC0-1.0",
+        "jurisdictions": [
+          {
+            "country": "US"
+          }
+        ],
+        "languages": [
+          "en"
+        ],
+        "legalArea": "data-protection",
+        "fields": [
+          "companyName",
+          "websiteUrl",
+          "advertisingCookieProviders",
+          "advertisingCookieControls",
+          "analyticsCookieProviders",
+          "analyticsCookieControls",
+          "essentialCookieProviders",
+          "essentialCookieControls",
+          "functionalityCookieProviders",
+          "functionalityCookieControls",
+          "socialCookieProviders",
+          "socialCookieControls",
+          "sessionReplayProvider",
+          "contactEmail",
+          "lastModifiedDate"
+        ],
+        "sha256": "1dbc4ab0233968e531413f15cbcb3e75985c5bd2bb8c0054288365b3a1f032d6"
+      },
+      {
+        "slug": "dpa-us",
+        "title": "Data Processing Addendum (U.S.)",
+        "file": "templates/dpa-us/template.docx",
+        "license": "CC0-1.0",
+        "jurisdictions": [
+          {
+            "country": "US"
+          }
+        ],
+        "languages": [
+          "en"
+        ],
+        "legalArea": "data-protection",
+        "fields": [
+          "providerName",
+          "customerName",
+          "agreementTitle",
+          "agreementEffectiveDate",
+          "subprocessorSiteUrl",
+          "providerAddress",
+          "providerDpContactRole",
+          "providerDpContactEmail",
+          "providerActivities",
+          "customerAddress",
+          "customerDpContactRole",
+          "customerDpContactEmail",
+          "subprocessorList"
+        ],
+        "sha256": "c7770caf84d4bd4b19ff4015a0407301b956ed8b06b0c21c4041bfdb7b7230d8"
+      },
+      {
+        "slug": "dpa-global",
+        "title": "Data Processing Addendum (Global)",
+        "file": "templates/dpa-global/template.docx",
+        "license": "CC0-1.0",
+        "jurisdictions": [
+          {
+            "country": "US"
+          },
+          {
+            "country": "EU"
+          },
+          {
+            "country": "GB"
+          },
+          {
+            "country": "CH"
+          }
+        ],
+        "languages": [
+          "en"
+        ],
+        "legalArea": "data-protection",
+        "fields": [
+          "providerName",
+          "customerName",
+          "agreementTitle",
+          "agreementEffectiveDate",
+          "subprocessorSiteUrl",
+          "providerAddress",
+          "providerDpContactRole",
+          "providerDpContactEmail",
+          "providerActivities",
+          "customerAddress",
+          "customerDpContactRole",
+          "customerDpContactEmail",
+          "subprocessorList"
+        ],
+        "sha256": "a730ac0f107b1002860259f4d2c54f2c478bbbc396bd8111959aacfa3ca76156"
+      },
+      {
+        "slug": "employee-offer-letter",
+        "title": "Employee Offer Letter (California Exempt)",
+        "file": "templates/employee-offer-letter/template.docx",
+        "license": "CC0-1.0",
+        "jurisdictions": [
+          {
+            "country": "US",
+            "subdivision": "US-CA"
+          }
+        ],
+        "languages": [
+          "en"
+        ],
+        "legalArea": "employment",
+        "fields": [
+          "companyName",
+          "letterDate",
+          "employeeName",
+          "employeeAddressLine1",
+          "employeeAddressLine2",
+          "employeeFirstName",
+          "position",
+          "duties",
+          "manager",
+          "workLocation",
+          "workCity",
+          "annualSalary",
+          "payFrequency",
+          "acceptanceDeadline",
+          "startDate",
+          "signerName",
+          "signerTitle",
+          "employeeEmail"
+        ],
+        "sha256": "4c92d52bba19139879b865972e290a8f08dbf2e373cceafc09cff8c4b183dbdf"
+      },
+      {
+        "slug": "master-services-agreement",
+        "title": "Master Services Agreement (MSA)",
+        "file": "templates/master-services-agreement/template.docx",
+        "license": "CC0-1.0",
+        "jurisdictions": [
+          {
+            "country": "US"
+          }
+        ],
+        "languages": [
+          "en"
+        ],
+        "legalArea": "commercial-contracts",
+        "fields": [
+          "effectiveDate",
+          "companyName",
+          "customerName",
+          "governingLawState",
+          "companyEmail",
+          "arbitrationVenue",
+          "orderFormValidThrough",
+          "billingCustomerName",
+          "billingContactName",
+          "billingEmail",
+          "fees",
+          "supplementalTermsReference"
+        ],
+        "sha256": "95cdec16e0772e6d2b6808f55782c3ada98c1cd967349d2081a0eace37b436f8"
+      },
+      {
+        "slug": "mutual-nda",
+        "title": "Mutual Non-Disclosure Agreement",
+        "file": "templates/mutual-nda/template.docx",
+        "license": "CC0-1.0",
+        "jurisdictions": [
+          {
+            "country": "US"
+          }
+        ],
+        "languages": [
+          "en"
+        ],
+        "legalArea": "confidentiality",
+        "fields": [
+          "companyName",
+          "effectiveDate",
+          "companyEmail",
+          "companyAddressLine1",
+          "companyAddressLine2"
+        ],
+        "sha256": "10f31b2d8b3553c12ae18e88065b906bcb80d37c4f4e7cced724451c0644028c"
+      },
+      {
+        "slug": "one-way-nda",
+        "title": "One-Way Non-Disclosure Agreement",
+        "file": "templates/one-way-nda/template.docx",
+        "license": "CC0-1.0",
+        "jurisdictions": [
+          {
+            "country": "US"
+          }
+        ],
+        "languages": [
+          "en"
+        ],
+        "legalArea": "confidentiality",
+        "fields": [
+          "companyName",
+          "permittedUse"
+        ],
+        "sha256": "e7b80081f05dc9db90115aad711b40a0e45832360751c1a33ccce5522730ea4b"
+      },
+      {
+        "slug": "privacy-policy-us",
+        "title": "Privacy Policy (U.S. Only)",
+        "file": "templates/privacy-policy-us/template.docx",
+        "license": "CC0-1.0",
+        "jurisdictions": [
+          {
+            "country": "US"
+          }
+        ],
+        "languages": [
+          "en"
+        ],
+        "legalArea": "data-protection",
+        "fields": [
+          "lastUpdatedDate",
+          "effectiveDate",
+          "companyLegalName",
+          "companyName",
+          "businessDescription",
+          "aiProviders",
+          "companyEmail",
+          "companyAddress",
+          "companyPhone",
+          "identityVerificationProcess",
+          "optOutLink",
+          "privacyRequestEmail",
+          "privacyRequestPhone",
+          "privacyRequestWebformUrl"
+        ],
+        "sha256": "1cc292257fddeb139aa23f36abbebb1771c43a794cd11d798cf3b96105dcf5c0"
+      },
+      {
+        "slug": "privacy-policy-gdpr",
+        "title": "Privacy Policy (GDPR Enhanced)",
+        "file": "templates/privacy-policy-gdpr/template.docx",
+        "license": "CC0-1.0",
+        "jurisdictions": [
+          {
+            "country": "US"
+          },
+          {
+            "country": "EU"
+          },
+          {
+            "country": "GB"
+          }
+        ],
+        "languages": [
+          "en"
+        ],
+        "legalArea": "data-protection",
+        "fields": [
+          "lastUpdatedDate",
+          "effectiveDate",
+          "companyLegalName",
+          "companyName",
+          "businessDescription",
+          "aiProviders",
+          "companyEmail",
+          "companyAddress",
+          "companyPhone",
+          "identityVerificationProcess",
+          "optOutLink",
+          "privacyRequestEmail",
+          "privacyRequestPhone",
+          "privacyRequestWebformUrl",
+          "euRepresentativeName",
+          "euRepresentativeEmail",
+          "euRepresentativeAddress",
+          "ukRepresentativeName",
+          "ukRepresentativeEmail",
+          "ukRepresentativeAddress",
+          "dpoEmail"
+        ],
+        "sha256": "6b568c5f02e840696e2b30363c6b538e453146766bfafd5229101a7e6798b20f"
+      },
+      {
+        "slug": "terms-of-use",
+        "title": "Terms of Use",
+        "file": "templates/terms-of-use/template.docx",
+        "license": "CC0-1.0",
+        "jurisdictions": [
+          {
+            "country": "US"
+          }
+        ],
+        "languages": [
+          "en"
+        ],
+        "legalArea": "website-terms",
+        "fields": [
+          "lastRevisedDate",
+          "siteDomain",
+          "companyName",
+          "privacyPolicyUrl",
+          "cookiePolicyLink",
+          "companyAddress",
+          "companyEmail",
+          "contactInformation",
+          "governingLawState",
+          "venueCounty",
+          "accessibilityContact",
+          "copyrightYear",
+          "disputesEmail",
+          "companyStreetAddress",
+          "companyZip",
+          "optOutEmail"
+        ],
+        "sha256": "57f063f4186527562efcc53e912145eb3ebedf71ff96a01d7748c0533634ffc3"
+      }
+    ]
+  }
+]
