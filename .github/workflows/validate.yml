@@ -1,0 +1,25 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - name: Validate packs
+        run: bun scripts/validate.ts
+      - name: Check index.json is current
+        run: bun scripts/build-index.ts --check
+      - name: Typecheck scripts
+        run: bunx tsc -p tsconfig.json
