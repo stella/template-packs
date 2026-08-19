@@ -1,0 +1,127 @@
+{
+  "id": "general-legal",
+  "name": "General Legal startup templates",
+  "version": "1.0.0",
+  "description": "Twelve attorney-drafted U.S. templates for startups and technology companies: advisor agreement, BAA, cookie notice, DPAs (U.S. and global), California exempt offer letter, MSA with order form, mutual and one-way NDAs, privacy policies (U.S. and GDPR-enhanced) and website terms of use.",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://github.com/General-Legal/legal-templates/blob/main/LICENSE",
+  "source": {
+    "name": "General-Legal/legal-templates",
+    "url": "https://github.com/General-Legal/legal-templates",
+    "retrievedAt": "2026-08-19"
+  },
+  "authors": [
+    {
+      "name": "General Legal",
+      "url": "https://general.legal",
+      "role": "drafter"
+    },
+    {
+      "name": "Stella",
+      "url": "https://github.com/stella/template-packs",
+      "role": "converter",
+      "date": "2026-08-19"
+    }
+  ],
+  "jurisdictions": [{ "country": "US" }],
+  "languages": ["en"],
+  "legalAreas": [
+    "commercial-contracts",
+    "confidentiality",
+    "data-protection",
+    "employment",
+    "healthcare-compliance",
+    "website-terms"
+  ],
+  "lastReviewedAt": "2026-05-14",
+  "disclaimer": "These templates are provided as-is for informational purposes and do not constitute legal advice. Laws differ by jurisdiction and change over time. Have a qualified attorney review any document before use.",
+  "templates": [
+    {
+      "slug": "advisor-agreement",
+      "title": "Advisor Agreement",
+      "file": "templates/advisor-agreement/template.docx",
+      "readme": "templates/advisor-agreement/README.md",
+      "legalArea": "commercial-contracts"
+    },
+    {
+      "slug": "business-associate-agreement",
+      "title": "Business Associate Agreement (BAA)",
+      "file": "templates/business-associate-agreement/template.docx",
+      "readme": "templates/business-associate-agreement/README.md",
+      "legalArea": "healthcare-compliance"
+    },
+    {
+      "slug": "cookie-notice",
+      "title": "Cookie Notice",
+      "file": "templates/cookie-notice/template.docx",
+      "readme": "templates/cookie-notice/README.md",
+      "legalArea": "data-protection"
+    },
+    {
+      "slug": "dpa-us",
+      "title": "Data Processing Addendum (U.S.)",
+      "file": "templates/dpa-us/template.docx",
+      "readme": "templates/dpa-us/README.md",
+      "legalArea": "data-protection"
+    },
+    {
+      "slug": "dpa-global",
+      "title": "Data Processing Addendum (Global)",
+      "file": "templates/dpa-global/template.docx",
+      "readme": "templates/dpa-global/README.md",
+      "jurisdictions": [{ "country": "US" }, { "country": "EU" }, { "country": "GB" }, { "country": "CH" }],
+      "legalArea": "data-protection"
+    },
+    {
+      "slug": "employee-offer-letter",
+      "title": "Employee Offer Letter (California Exempt)",
+      "file": "templates/employee-offer-letter/template.docx",
+      "readme": "templates/employee-offer-letter/README.md",
+      "jurisdictions": [{ "country": "US", "subdivision": "US-CA" }],
+      "legalArea": "employment"
+    },
+    {
+      "slug": "master-services-agreement",
+      "title": "Master Services Agreement (MSA)",
+      "file": "templates/master-services-agreement/template.docx",
+      "readme": "templates/master-services-agreement/README.md",
+      "legalArea": "commercial-contracts"
+    },
+    {
+      "slug": "mutual-nda",
+      "title": "Mutual Non-Disclosure Agreement",
+      "file": "templates/mutual-nda/template.docx",
+      "readme": "templates/mutual-nda/README.md",
+      "legalArea": "confidentiality"
+    },
+    {
+      "slug": "one-way-nda",
+      "title": "One-Way Non-Disclosure Agreement",
+      "file": "templates/one-way-nda/template.docx",
+      "readme": "templates/one-way-nda/README.md",
+      "legalArea": "confidentiality"
+    },
+    {
+      "slug": "privacy-policy-us",
+      "title": "Privacy Policy (U.S. Only)",
+      "file": "templates/privacy-policy-us/template.docx",
+      "readme": "templates/privacy-policy-us/README.md",
+      "legalArea": "data-protection"
+    },
+    {
+      "slug": "privacy-policy-gdpr",
+      "title": "Privacy Policy (GDPR Enhanced)",
+      "file": "templates/privacy-policy-gdpr/template.docx",
+      "readme": "templates/privacy-policy-gdpr/README.md",
+      "jurisdictions": [{ "country": "US" }, { "country": "EU" }, { "country": "GB" }],
+      "legalArea": "data-protection"
+    },
+    {
+      "slug": "terms-of-use",
+      "title": "Terms of Use",
+      "file": "templates/terms-of-use/template.docx",
+      "readme": "templates/terms-of-use/README.md",
+      "legalArea": "website-terms"
+    }
+  ]
+}
