@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/stella/template-packs/main/schema/pack.schema.json",
+  "title": "Stella template pack",
+  "description": "Manifest of one template pack: a directory under packs/ holding a LICENSE, this pack.json, and one directory per template with a fillable DOCX and a README.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "version",
+    "description",
+    "license",
+    "licenseUrl",
+    "source",
+    "authors",
+    "jurisdictions",
+    "languages",
+    "legalAreas",
+    "lastReviewedAt",
+    "disclaimer",
+    "templates"
+  ],
+  "properties": {
+    "id": {
+      "description": "Pack identifier; must equal the pack directory name.",
+      "$ref": "#/$defs/slug"
+    },
+    "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "version": {
+      "description": "Semantic version of the pack contents. Bump patch for README/metadata fixes, minor for added templates or fields, major for removed or renamed templates or fields.",
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "description": { "type": "string", "minLength": 1, "maxLength": 1000 },
+    "license": {
+      "description": "SPDX identifier of the content license. Only permissive licenses are accepted.",
+      "$ref": "#/$defs/license"
+    },
+    "licenseUrl": { "type": "string", "format": "uri" },
+    "source": {
+      "description": "Where the original templates were obtained.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url", "retrievedAt"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "retrievedAt": { "$ref": "#/$defs/date" }
+      }
+    },
+    "authors": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/author" }
+    },
+    "jurisdictions": {
+      "description": "Jurisdictions the pack as a whole is drafted for. Empty array means jurisdiction-agnostic. Templates may narrow or override this.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/jurisdiction" },
+      "uniqueItems": true
+    },
+    "languages": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/language" },
+      "uniqueItems": true
+    },
+    "legalAreas": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/legalArea" },
+      "uniqueItems": true
+    },
+    "lastReviewedAt": {
+      "description": "Date the source content was last reviewed by its drafters (as stated by the source, or the source's last content change).",
+      "$ref": "#/$defs/date"
+    },
+    "disclaimer": { "type": "string", "minLength": 1 },
+    "templates": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/template" }
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "maxLength": 64
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "license": {
+      "type": "string",
+      "enum": ["CC0-1.0", "CC-BY-4.0", "MIT"]
+    },
+    "language": {
+      "description": "BCP-47 language tag, e.g. en, en-US, cs, de-AT.",
+      "type": "string",
+      "pattern": "^[a-z]{2,3}(?:-[A-Za-z]{4})?(?:-(?:[A-Z]{2}|\\d{3}))?$"
+    },
+    "legalArea": {
+      "description": "Lowercase kebab-case legal area, e.g. commercial-contracts, data-protection, employment.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "jurisdiction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["country"],
+      "properties": {
+        "country": {
+          "description": "ISO 3166-1 alpha-2 country code; the exceptionally reserved code EU denotes the European Union as a whole.",
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "subdivision": {
+          "description": "ISO 3166-2 code, e.g. US-CA.",
+          "type": "string",
+          "pattern": "^[A-Z]{2}-[A-Z0-9]{1,3}$"
+        }
+      }
+    },
+    "author": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "role"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "organization": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "role": { "type": "string", "enum": ["drafter", "reviewer", "converter"] },
+        "date": { "$ref": "#/$defs/date" }
+      }
+    },
+    "template": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slug", "title", "file", "readme"],
+      "properties": {
+        "slug": {
+          "description": "Template identifier; must equal the template directory name under templates/.",
+          "$ref": "#/$defs/slug"
+        },
+        "title": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "file": {
+          "description": "Path of the fillable DOCX, relative to the pack directory.",
+          "type": "string",
+          "pattern": "^templates/[a-z0-9]+(?:-[a-z0-9]+)*/[A-Za-z0-9._-]+\\.docx$"
+        },
+        "readme": {
+          "description": "Path of the template README, relative to the pack directory.",
+          "type": "string",
+          "pattern": "^templates/[a-z0-9]+(?:-[a-z0-9]+)*/README\\.md$"
+        },
+        "jurisdictions": {
+          "description": "Overrides the pack jurisdictions for this template.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/jurisdiction" },
+          "uniqueItems": true
+        },
+        "languages": {
+          "description": "Overrides the pack languages for this template.",
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/language" },
+          "uniqueItems": true
+        },
+        "legalArea": { "$ref": "#/$defs/legalArea" },
+        "license": {
+          "description": "Overrides the pack license for this template.",
+          "$ref": "#/$defs/license"
+        }
+      }
+    }
+  }
+}
