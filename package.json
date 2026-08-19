@@ -1,0 +1,20 @@
+{
+  "name": "@stella/template-packs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Legal template packs for Stella: attributed, licensed, fillable",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "validate": "bun scripts/validate.ts",
+    "build-index": "bun scripts/build-index.ts",
+    "check": "bun scripts/validate.ts && bun scripts/build-index.ts --check"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "jszip": "^3.10.1",
+    "typescript": "^5.9.2"
+  }
+}

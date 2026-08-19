@@ -1,0 +1,5 @@
+# Default owners for everything; pack-specific owners below.
+*                     @jan-kubica
+schema/               @jan-kubica
+scripts/              @jan-kubica
+packs/general-legal/  @jan-kubica
