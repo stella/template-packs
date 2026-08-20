@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/assets/banner.png" alt="stll/template-packs" width="100%" />
+</p>
+
 # Stella template packs
 
 Content repository of legal template packs for [stella](https://github.com/stella/stella), the open-source legal workspace. Stella bundles this repository and offers the packs to users, filtered by jurisdiction, as an optional install.
