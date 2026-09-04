@@ -5,14 +5,14 @@
   "description": "Legal template packs for Stella: attributed, licensed, fillable",
   "license": "Apache-2.0",
   "type": "module",
-  "packageManager": "bun@1.4.0",
+  "packageManager": "bun@1.4.1",
   "scripts": {
     "validate": "bun scripts/validate.ts",
     "build-index": "bun scripts/build-index.ts",
     "check": "bun scripts/validate.ts && bun scripts/build-index.ts --check"
   },
   "devDependencies": {
-    "bun-types": "1.4.0",
+    "bun-types": "1.4.1",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "jszip": "^3.10.1",
