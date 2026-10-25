@@ -22,4 +22,4 @@ jobs:
       - name: Check index.json is current
         run: bun scripts/build-index.ts --check
       - name: Typecheck scripts
-        run: bunx tsc -p tsconfig.json
+        run: bun run typecheck
