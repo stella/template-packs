@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   pull_request:
+  merge_group:
+    types: [checks_requested]
 
 permissions:
   contents: read
@@ -23,3 +25,15 @@ jobs:
         run: bun scripts/build-index.ts --check
       - name: Typecheck scripts
         run: bunx tsc -p tsconfig.json
+
+  ci-result:
+    if: always()
+    needs: [validate]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Require every validation job
+        env:
+          VALIDATE_RESULT: ${{ needs.validate.result }}
+        run: test "$VALIDATE_RESULT" = success
