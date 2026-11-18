@@ -1,0 +1,5 @@
+[install]
+minimumReleaseAge = 432000
+minimumReleaseAgeExcludes = [
+  # bun-types ships only declarations and must match the pinned Bun runtime.
+]
